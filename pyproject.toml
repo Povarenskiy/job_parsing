@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "job-scraping"
+version = "0.1.0"
+description = ""
+authors = ["Povarenskiy <Povarenskiy.rb@yandex.ru>"]
+readme = "README.md"
+packages = [{include = "job_scraping"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2"
+celery = "^5.2.7"
+scrapy = "^2.8.0"
+scrapy-djangoitem = "^1.1.1"
+redis = "^4.5.4"
+
+
+[tool.poetry.group.dev.dependencies]
+gevent = "^22.10.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
