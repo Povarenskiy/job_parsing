@@ -18,7 +18,7 @@ def send_notification(code):
     """
     apiURL = f'https://api.telegram.org/bot{settings.BOT_TOKEN}/sendMessage'
 
-    item = HhItems.objects.get(code=code) 
+    item = HhItems.objects.filter(code=code).first() 
     message = f'{item.title}\n{item.exp}\n{item.url}'
     
     try:
