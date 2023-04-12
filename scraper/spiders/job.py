@@ -43,7 +43,7 @@ class JobSpider(scrapy.Spider):
     def start_requests(self):
         """Запрос на первую страницу поиска с вакансиями"""
         for word in self.key_words:
-            start_url = f'https://hh.ru/search/vacancy?text={word}+&area=1'
+            start_url = f'https://hh.ru/search/vacancy?area=1&ored_clusters=true&text={word}&order_by=publication_time'
             yield scrapy.Request(start_url, callback=self.parse_page)
 
 
