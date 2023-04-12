@@ -1,11 +1,10 @@
 import requests
 
 from scraper.spiders.job import JobSpider
-from scrapy.crawler import CrawlerProcess, CrawlerRunner
+from scrapy.crawler import CrawlerProcess
 from scrapy.utils.project import get_project_settings
 
 from job_scraping.celery import app
-from celery.signals import celeryd_init
 
 from django.conf import settings
 from .models import HhItems
